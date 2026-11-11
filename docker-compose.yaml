@@ -1,0 +1,11 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: langgraph-mongo
+    ports:
+      - "27017:27017"     # MongoDB ka mashhoor port
+    volumes:
+      - mongo-data:/data/db  # ⭐ volume = container band ho tab bhi data bacha rahe
+
+volumes:
+  mongo-data:
